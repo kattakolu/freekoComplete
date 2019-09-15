@@ -151,6 +151,7 @@ router.post('/register', function (req, res) {
       });
     })
     .catch(function(userExists){
+      console.log(userExists);
       res.redirect('/register');
     })
 });
