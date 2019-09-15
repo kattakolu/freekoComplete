@@ -11,11 +11,13 @@ const mongoose = require('mongoose');
 const app = express();
 
 
-mongoose.connect('mongodb+srv://admin:Pu3Rz7dQB9zAjiR3@cluster0-9zemc.mongodb.net/test?retryWrites=true&w=majority/freekoLab')
+mongoose.connect('mongodb+srv://admin:nx2km6t5XaRm3hac@cluster0-9zemc.mongodb.net/test?retryWrites=true&w=majority/freekoLab')
   .then(function () {
     console.log('connected to db');
   })
-
+  .catch(function(e){
+    console.log(e);
+  })
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
