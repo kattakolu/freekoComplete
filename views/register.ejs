@@ -1,0 +1,66 @@
+<style>
+    input[type=number]::-webkit-inner-spin-button,
+    input[type=number]::-webkit-outer-spin-button {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        margin: 0;
+    }
+</style>
+
+<% include ./partials/header.ejs %>
+
+<div class="container pt-3 pb-3 mt-5">
+    <h4 class="display-5">Already have an account ?</h4>
+    <a class="btn btn-primary mt-3" href="/login">Log In Now</a>
+    <hr>
+    <h3 class="display-5">Register Now</h3>
+    <form id="regForm" method="POST" action="/register">
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="inputname">Name</label>
+                <input type="text" name="name" class="form-control" id="inputname" placeholder="Name">
+            </div>
+            <div class="form-group col-md-6">
+                <label for="inputusername">Username</label>
+                <input type="text" name="username" class="form-control" id="inputusername" placeholder="Username">
+            </div>
+            <div class="form-group col-md-6">
+                <label for="inputPassword4">Password</label>
+                <input type="password" name="password" class="form-control" id="inputPassword4" placeholder="Password">
+            </div>
+            <div class="form-group col-md-6">
+                <label for="inputEmail">Email</label>
+                <input type="email" name="email" class="form-control" id="inputEmail" placeholder="Email">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="inputAddress">Something About You 🎭</label>
+            <textarea name="about" class="form-control" id="exampleFormControlTextarea1" rows="3"
+                placeholder="What you're good at, ambitions, about you..."></textarea>
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-4">
+                <label for="inputCity">City</label>
+                <input type="text" name="city" class="form-control" id="inputCity">
+            </div>
+            <div class="form-group col-md-4">
+                <label for="inputNumber">Contact Number</label>
+                <input type="number" name="phone" class="form-control" id="inputNumber">
+            </div>
+            <div class="form-group col-md-4">
+                <label for="inputState">Gender</label>
+                <select id="inputState" name="gender" class="form-control">
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="others">Others</option>
+                </select>
+            </div>
+        </div>
+        <button type="submit" class="btn btn-success">Register Me</button>
+    </form>
+</div>
+
+<script src="../javascripts/registerFormValidation.js"></script>
+
+<% include ./partials/footer.ejs %>

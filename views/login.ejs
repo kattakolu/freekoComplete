@@ -1,0 +1,56 @@
+<style>
+    #loginBg{
+        width: 100%;
+        height: 100%;
+        background-color: rgb(125, 186, 255);
+    }
+    #loginMenu{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        width: 370px;
+        min-height: 200px;
+        padding: 60px 20px 10px 20px;
+        border-radius: 10px;
+        background-color: #fff;
+    }
+    #icon{
+        position: absolute;
+        top: -30px;
+        left: 50%;
+        transform: translate(-50%,0);
+        width: 78px;
+        height: 78px;
+        border-radius: 50%;
+        background-image: url('../images/userIcon.jpg');
+        background-size: contain;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.295);
+    }
+
+    @media(max-width: 380px){
+        #loginMenu{
+            width: 80%;
+        }
+    }
+</style>
+
+<% include ./partials/header.ejs %>
+    <div id="loginBg">
+        <div id="loginMenu">
+            <div id="icon"></div>
+            <form action="/login" method="POST" class="text-center">
+                <div class="form-group">
+                  <label for="exampleInputEmail1">Email address</label>
+                  <input type="text" name="username" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Username Please...">
+                  <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                </div>
+                <div class="form-group">
+                  <label for="exampleInputPassword1">Password</label>
+                  <input type="password" name="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+              </form>
+        </div>
+    </div>
+<% include ./partials/footer.ejs %>
