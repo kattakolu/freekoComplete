@@ -7,6 +7,7 @@ const expressSession = require('express-session');
 const passport = require('passport');
 const indexRouter = require('./routes/index');
 const userModel = require('./routes/users');
+const mongoose = require('mongoose');
 const app = express();
 
 
