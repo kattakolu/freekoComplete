@@ -150,6 +150,9 @@ router.post('/register', function (req, res) {
         res.redirect('/profile');
       });
     })
+    .catch(function(userExists){
+      res.redirect('/register');
+    })
 });
 
 router.post('/update', function (req, res) {
