@@ -11,7 +11,7 @@ const mongoose = require('mongoose');
 const app = express();
 
 
-mongoose.connect('mongodb+srv://admin:nx2km6t5XaRm3hac@cluster0-9zemc.mongodb.net/test?retryWrites=true&w=majority/freekoLab')
+mongoose.connect('mongodb+srv://admin:nx2km6t5XaRm3hac@cluster0-9zemc.mongodb.net/test?retryWrites=true&w=majority')
   .then(function () {
     console.log('connected to db');
   })
