@@ -39,7 +39,7 @@
             <p class="lead mt-4"><%= details.about %></p>
             <% if(isUser == false){ %>
             <div class="icns flexy">
-                <span title="Call Now" class="icon"><i class="fa fa-phone"></i></span>
+                <a href=<%= 'tel:'+details.contact %> title="Call Now" class="icon"><i class="fa fa-phone"></i></a>
                 <a href=<%= '/notification/'+details._id %>><span title="Buzz Them" class="icon ml-3"><i
                             class="fa fa-bell"></i></span></a>
                 <span data-toggle="modal" data-target="#exampleModalCenter" title="Say Anonymously" class="icon ml-3"><i
